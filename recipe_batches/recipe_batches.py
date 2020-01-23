@@ -5,8 +5,6 @@ import math
 recipe = { 'milk': 100, 'butter': 50, 'flour': 5 }
 ingredients = { 'milk': 132, 'butter': 60, 'flour': 51 }
 
-testr = { 'milk': 100, 'flour': 4, 'sugar': 10, 'butter': 5 }
-testi = { 'milk': 1288, 'flour': 9, 'sugar': 95 }
 
 # for each key in recipe, ingredient.key // ingredient.key, 
   # if all results > 0, return highest common result
@@ -19,13 +17,10 @@ def recipe_batches(r, i):
       if k1 not in i.keys():
         return 0
       if k1 == k2:
-        print("key:", k1)
         if (i[k2] // r[k1]) > 0:
           current_qty = i[k2] // r[k1]
-          print("***current_qty**:  ", current_qty)
         if current_qty < batches: 
           batches = current_qty
-    print("current QTY: ", current_qty)
   return batches
 
 
